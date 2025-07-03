@@ -9,15 +9,19 @@ import java.util.List;
 @Service
 public class UserService {
 
-    //Instanciation en mémoire de users
-    private final List<User> users = List.of(
-            new User(1L, "alice"),
-            new User(2L, "bob"),
-            new User(3L, "charlie")
-    );
 
     private long currentUserId = 1;
     private final List<User> users = new ArrayList<>();
+
+
+    //Instanciation d'utilisateur dans la memoire
+
+        {
+            users.add(new User(1L, "alice"));
+            users.add(new User(2L, "bob"));
+            users.add(new User(3L, "charlie"));
+        }
+
 
     /**Méthode qui permet d'ajouter un user*/
     public User addUser(String username) {

@@ -3,10 +3,12 @@ package com.eval.thymeleaf.service;
 import com.eval.thymeleaf.model.Project;
 import com.eval.thymeleaf.model.Task;
 import com.eval.thymeleaf.model.User;
+import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
 
+@Service
 public class ProjectService {
 
     private long currentProjectId = 1;

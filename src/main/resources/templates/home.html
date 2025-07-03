@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="layout/header :: headerFragment"></head>
+<body>
+
+<div class="container">
+    <h2>Accueil</h2>
+    <ul>
+        <li><a th:href="@{/users}">Voir les utilisateurs</a></li>
+        <li><a th:href="@{/projects}">Voir les projets</a></li>
+        <li><a th:href="@{/projects/create}">Créer un projet</a></li>
+        <li><a th:href="@{/tasks/create}">Créer une tâche</a></li>
+    </ul>
+</div>
+
+<div th:replace="layout/footer :: footerFragment"></div>
+</body>
+</html>
