@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html xmlns:th="http://www.thymeleaf.org">
 
 <head>
@@ -9,7 +8,7 @@
 
 <body>
 
-<div th:replace="layout/header :: header"></div>
+<div th:replace="~{layout/header :: header}"></div>
 
 <section>
 
@@ -31,12 +30,12 @@
             <td th:text="${project.creator.username}">Créateur</td>
             <td th:text="${#lists.size(project.tasks)}">0</td>
             <td>
-                <a th:href="@{'/projects/' + ${project.id}}"></a>
+                <a th:href="@{'/projects/' + ${project.id}}" th:text="${project.id}"></a>
             </td>
         </tr>
         </tbody>
     </table>
 </section>
-    <div th:replace="layout/footer :: footer"></div>
+<div th:replace="~{layout/footer :: footerFragment}"></div>
 </body>
 </html>
