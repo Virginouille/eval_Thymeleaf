@@ -6,14 +6,14 @@
 </head>
 <body>
 
-<div th:replace="fragments :: header"></div>
+<div th:replace="layout/header :: header"></div>
 
 <h1>Création d’un projet</h1>
 
 <form action="#" th:action="@{/projects/create}" th:object="${project}" method="post">
     <div>
         <label for="name">Nom du projet :</label>
-        <input type="text" id="name" th:field="${name}" required />
+        <input type="text" id="name" th:field="*{name}" required />
     </div>
 
     <div>
@@ -29,6 +29,6 @@
     </div>
 </form>
 
-<div th:replace="fragments footer"></div>
+<div th:replace="layout/footer:: footer"></div>
 </body>
 </html>

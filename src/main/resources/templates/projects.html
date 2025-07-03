@@ -9,7 +9,7 @@
 
 <body>
 
-<div th:replace="fragments :: header"></div>
+<div th:replace="layout/header :: header"></div>
 
 <section>
 
@@ -31,12 +31,12 @@
             <td th:text="${project.creator.username}">Créateur</td>
             <td th:text="${#lists.size(project.tasks)}">0</td>
             <td>
-                <a th:href="@{'/project/' + ${project.id}}"></a>
+                <a th:href="@{'/projects/' + ${project.id}}"></a>
             </td>
         </tr>
         </tbody>
     </table>
 </section>
-    <div th:replace="fragments :: footer"></div>
+    <div th:replace="layout/footer :: footer"></div>
 </body>
 </html>

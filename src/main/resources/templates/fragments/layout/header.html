@@ -1,12 +1,9 @@
-<!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
 <head th:fragment="headerFragment">
   <meta charset="UTF-8">
   <title th:replace="${title} ?: 'Gestion des tâches'">Gestion des tâches</title>
-  <link rel="stylesheet" th:href="@{/css/style.css}" />
 </head>
-<body>
-<header>
+
+<div th:fragment="header">
   <h1><a th:href="@{/}">Gestion des projets & tâches</a></h1>
   <nav>
     <ul>
@@ -16,5 +13,4 @@
       <li><a th:href="@{/tasks/create}">Nouvelle tâche</a></li>
     </ul>
   </nav>
-  <hr/>
-</header>
+</div>
