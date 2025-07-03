@@ -1,12 +1,15 @@
 package com.eval.thymeleaf.model;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
-import org.springframework.scheduling.config.Task;
+import lombok.NoArgsConstructor;
 
 import java.util.ArrayList;
 import java.util.List;
 
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class Project {
 
     private Long id;
