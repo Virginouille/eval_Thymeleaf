@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Liste des projects</title>
+    <meta charset="UTF-8" />
+</head>
+
+<body>
+<section>
+    <h1>Liste des projects</h1>
+
+    <table>
+        <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">CreatorName</th>
+            <th scope="col">NumberOfTasks</th>
+            <th scope="col">LinkProjectPage</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        <tr th:each="project : ${projects}">
+            <td th:text="${project.id}">ID</td>
+            <td th:text="${project.creator}"></td>
+            <td th:text="${project.tasks}"></td>
+            <td th:text="${project.pr}"></td>
+        </tr>
+        </tbody>
+    </table>
+</section>
+</body>
+</html>
